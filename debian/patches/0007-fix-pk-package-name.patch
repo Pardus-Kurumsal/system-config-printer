@@ -1,10 +1,16 @@
-Description: Fix the package names that PackageKit should try to install
-Author: Laurent Bigonville <bigon@debian.org>
-Forwarded: not-needed
+From: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Date: Thu, 19 Jul 2018 16:09:55 +0300
+Subject: fix-pk-package-name
 
+---
+ newprinter.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/newprinter.py b/newprinter.py
+index 5c12a27..86e886d 100644
 --- a/newprinter.py
 +++ b/newprinter.py
-@@ -1068,7 +1068,7 @@
+@@ -1068,7 +1068,7 @@ class NewPrinterGUI(GtkGUI):
                              debugprint ("No smb backend so attempting install")
                              try:
                                  pk = installpackage.PackageKit ()

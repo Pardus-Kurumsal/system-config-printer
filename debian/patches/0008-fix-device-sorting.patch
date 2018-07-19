@@ -1,7 +1,6 @@
-From 43747c3b6d097663a40bf0e3e5ab30f0518312cc Mon Sep 17 00:00:00 2001
 From: Tim Waugh <twaugh@redhat.com>
 Date: Tue, 26 May 2015 09:56:34 +0100
-Subject: [PATCH] Fixed Device sorting (bug #1210733).
+Subject: Fixed Device sorting (bug #1210733).
 
 ---
  cupshelpers/cupshelpers.py | 58 +++++++++++++++++++++++-----------------------
@@ -9,10 +8,10 @@ Subject: [PATCH] Fixed Device sorting (bug #1210733).
  2 files changed, 47 insertions(+), 29 deletions(-)
 
 diff --git a/cupshelpers/cupshelpers.py b/cupshelpers/cupshelpers.py
-index 5067b76..3c502eb 100755
+index 42fe270..00012e9 100755
 --- a/cupshelpers/cupshelpers.py
 +++ b/cupshelpers/cupshelpers.py
-@@ -547,68 +547,68 @@ def __lt__(self, other):
+@@ -547,68 +547,68 @@ class Device:
          Compare devices by order of preference.
          """
          if other == None:
@@ -111,10 +110,10 @@ index 5067b76..3c502eb 100755
          if not result:
              result = self.info < other.info
 diff --git a/test_PhysicalDevice.py b/test_PhysicalDevice.py
-index 2d452d6..1af90d9 100644
+index dcac1c0..afb0b5a 100644
 --- a/test_PhysicalDevice.py
 +++ b/test_PhysicalDevice.py
-@@ -55,3 +55,21 @@ def test_ordering():
+@@ -49,3 +49,21 @@ def run_test():
      phys.add_device (device)
      devices = phys.get_devices ()
      assert devices[0].uri.startswith ("hp")

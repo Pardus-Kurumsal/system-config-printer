@@ -1,11 +1,17 @@
-Description: install with --install-layout=deb
-Author: Martin Pitt <mpitt@debian.org>
-Forwarded: not-needed
-Last-Update: 2015-09-17
+From: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Date: Thu, 19 Jul 2018 16:09:55 +0300
+Subject: _install_layout
 
+---
+ Makefile.am | 2 +-
+ Makefile.in | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 10eb32d..610aa47 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -58,7 +58,7 @@
+@@ -58,7 +58,7 @@ all-local: .stamp-distutils-in-builddir config.py cupshelpers/config.py
  
  # Use distutils to install the module.
  install-exec-local: .stamp-distutils-in-builddir
@@ -14,9 +20,11 @@ Last-Update: 2015-09-17
  
  # Uninstall the module, crossing our fingers that we know enough
  # about how distutils works to do this.  Unfortunately, distutils
+diff --git a/Makefile.in b/Makefile.in
+index 02e95e1..a73c29d 100644
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -1962,7 +1962,7 @@
+@@ -1962,7 +1962,7 @@ all-local: .stamp-distutils-in-builddir config.py cupshelpers/config.py
  
  # Use distutils to install the module.
  install-exec-local: .stamp-distutils-in-builddir

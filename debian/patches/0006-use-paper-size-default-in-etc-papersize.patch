@@ -1,10 +1,16 @@
-Description: Use setting in /etc/papersize if available
-Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=593219
-Origin: vendor
+From: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Date: Thu, 19 Jul 2018 16:09:55 +0300
+Subject: use-paper-size-default-in-etc-papersize
 
+---
+ cupshelpers/cupshelpers.py | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+diff --git a/cupshelpers/cupshelpers.py b/cupshelpers/cupshelpers.py
+index 5067b76..42fe270 100755
 --- a/cupshelpers/cupshelpers.py
 +++ b/cupshelpers/cupshelpers.py
-@@ -717,6 +717,23 @@
+@@ -717,6 +717,23 @@ def setPPDPageSize(ppd, language):
      for each in letter:
          if language == each:
              size = 'Letter'

@@ -1,7 +1,6 @@
-From 68f059e44942467ddeee4977d10f2b3a961c9f3a Mon Sep 17 00:00:00 2001
 From: Tim Waugh <twaugh@redhat.com>
 Date: Tue, 12 May 2015 09:56:27 +0100
-Subject: [PATCH] Fixed shbang line in udev/udev-add-printer (trac #244).
+Subject: Fixed shbang line in udev/udev-add-printer (trac #244).
 
 ---
  udev/udev-add-printer | 2 +-
