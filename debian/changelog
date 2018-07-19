@@ -1,3 +1,10 @@
+system-config-printer (1.5.7-4pardus2) unstable; urgency=medium
+
+  * Pardus CI implementation
+  * Add patches
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Thu, 19 Jul 2018 16:11:06 +0300
+
 system-config-printer (1.5.7-3) unstable; urgency=medium
 
   * debian/patches/0010-no-start-printer-applet-gnome.patch: Do not start the
